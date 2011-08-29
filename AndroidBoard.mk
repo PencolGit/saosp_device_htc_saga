@@ -22,7 +22,17 @@
 # overridden further down
 
 # include rules from the generic saga board
-include device/htc/saga/AndroidBoardCommon.mk
+LOCAL_PATH := $(call my-dir)
+
+$(call add-radio-file,recovery/images/firmware_install.565)
+$(call add-radio-file,recovery/images/firmware_error.565)
+$(call add-radio-file,recovery/images/bitmap_size.txt)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := saga-keypad.kcm
+include $(BUILD_KEY_CHAR_MAP)
+
+ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
 
 # include the non-open-source counterpart to this file
 -include vendor/htc/saga/AndroidBoardVendor.mk
