@@ -73,7 +73,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES := \
     sensors.saga \
     lights.saga \
-    gralloc.qsd8k \
+    gralloc.msm7x30 \
     librs_jni \
     com.android.future.usb.accessory
 
