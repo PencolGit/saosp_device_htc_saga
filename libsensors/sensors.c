@@ -25,7 +25,7 @@
  */
 
 /*
- * the AK8973 has a 8-bit ADC but the firmware seems to average 16 samples,
+ * the AK8975 has a 8-bit ADC but the firmware seems to average 16 samples,
  * or at least makes its calibration on 12-bits values. This increases the
  * resolution by 4 bits.
  */
@@ -35,21 +35,21 @@ static const struct sensor_t sSensorList[] = {
                 "Bosh",
                 1, SENSORS_HANDLE_BASE+ID_A,
                 SENSOR_TYPE_ACCELEROMETER, 4.0f*9.81f, (4.0f*9.81f)/256.0f, 0.2f, 0, { } },
-        { "AK8973 3-axis Magnetic field sensor",
+        { "AK8975 3-axis Magnetic field sensor",
                 "Asahi Kasei",
                 1, SENSORS_HANDLE_BASE+ID_M,
                 SENSOR_TYPE_MAGNETIC_FIELD, 2000.0f, 1.0f/16.0f, 6.8f, 0, { } },
-        { "AK8973 Orientation sensor",
+        { "AK8975 Orientation sensor",
                 "Asahi Kasei",
                 1, SENSORS_HANDLE_BASE+ID_O,
                 SENSOR_TYPE_ORIENTATION, 360.0f, 1.0f, 7.0f, 0, { } },
-        { "CM3602 Proximity sensor",
+        { "CM3628 Proximity sensor",
                 "Capella Microsystems",
                 1, SENSORS_HANDLE_BASE+ID_P,
                 SENSOR_TYPE_PROXIMITY,
                 PROXIMITY_THRESHOLD_CM, PROXIMITY_THRESHOLD_CM,
                 0.5f, 0, { } },
-        { "CM3602 Light sensor",
+        { "CM3628 Light sensor",
                 "Capella Microsystems",
                 1, SENSORS_HANDLE_BASE+ID_L,
                 SENSOR_TYPE_LIGHT, 10240.0f, 1.0f, 0.5f, 0, { } },
@@ -75,7 +75,7 @@ const struct sensors_module_t HAL_MODULE_INFO_SYM = {
         .version_major = 1,
         .version_minor = 0,
         .id = SENSORS_HARDWARE_MODULE_ID,
-        .name = "AK8973A & CM3602 Sensors Module",
+        .name = "AK8975A & CM3628 Sensors Module",
         .author = "The Android Open Source Project",
         .methods = &sensors_module_methods,
     },
