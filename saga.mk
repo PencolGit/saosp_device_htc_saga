@@ -43,7 +43,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # This is a high density device with more memory, so larger vm heaps for it.
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapsize=32m
+    dalvik.vm.heapsize=64m
 
 
 ## (2) Also get non-open-source GSM-specific aspects if available
@@ -86,7 +86,6 @@ PRODUCT_LOCALES := hdpi
 PRODUCT_COPY_FILES += \
     device/htc/saga/saga-keypad.kl:system/usr/keylayout/saga-keypad.kl \
     device/htc/saga/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-    device/htc/saga/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/saga/vold.fstab:system/etc/vold.fstab
 
 
